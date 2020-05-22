@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/main.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head> 
 <body> 
@@ -74,7 +75,7 @@
                     </div>
                   </div>
                   <div>
-                      <button type="submit" name="salvartime" data-theme="b" class="ui-btn-hidden" aria-disabled="false">Salvar Time</button>
+                      <button type="submit" name="salvartime" data-theme="b" class="ui-btn-hidden" aria-disabled="false" onClick='salvarTime()'>Salvar Time</button>
                  </div>
             </form>                
         </div>
@@ -98,13 +99,8 @@
             <h1> FOOTTAL - Cadastro de Times </h1>
         </div>
         <div data-role="content">
-            <ul data-role="listview" data-filter="true" data-filter-placeholder="Pesquisar Times..." data-inset="true">
-                <li><a href="#">Time 1</a></li>
-                <li><a href="#">Time 2</a></li>
-                <li><a href="#">Time 3</a></li>
-                <li><a href="#">Time 4</a></li>
-                <li><a href="#">Time 5</a></li>
-                <li><a href="#">Lagartixa</a></li>
+            <ul id="ul_listatime" data-role="listview" data-filter="true" data-filter-placeholder="Pesquisar Times..." data-inset="true">
+                <script>listaTimes();</script>
             </ul>
         </div>
         <div data-role="footer" data-position="fixed">
