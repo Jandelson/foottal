@@ -5,6 +5,9 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/model.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/script.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head> 
 <body> 
@@ -14,7 +17,7 @@
             <h1> FOOTTAL </h1>
         </div>
         <div data-role="content" role="main" class="ui-content">
-            <p> <a data-role="button" href="#listatimes">Times</a> </p>
+            <p> <a data-role="button" href="#listatimes" onclick="listaTimes()">Times</a> </p>
             <p> <a data-role="button" href="#times">Cadastrar Times</a> </p>
             <!-- <p> <a data-role="button" href="#pagina3" data-rel="dialog">Times</a> </p> -->
         </div>
@@ -41,7 +44,7 @@
         </div>
         <div data-role="content">
             <p align="center"> Cadastre seu Time </p>
-            <form method="post" action="#">
+            <form id="formtime" method="post" action="#">
                 <div data-role="tabs" id="tabs">
                     <div data-role="navbar">
                       <ul>
@@ -63,12 +66,12 @@
                     </select>
                     </div>
                     <div id="jogador">
-                        <input type="text" name="jogador-1" id="jogador-1" placeholder="Goleiro"   value="" required>
-                        <input type="text" name="jogador-2" id="jogador-2" placeholder="Jogador 2" value="" required>
-                        <input type="text" name="jogador-3" id="jogador-3" placeholder="Jogador 3" value="" required>
-                        <input type="text" name="jogador-4" id="jogador-4" placeholder="Jogador 4" value="" required>
-                        <input type="text" name="jogador-5" id="jogador-5" placeholder="Jogador 5" value="" required>
-                        <input type="text" name="jogador-6" id="jogador-6" placeholder="Jogador 6" value="" required>
+                        <input type="text" name="jogador_1" id="jogador_1" placeholder="Jogador 1 Goleiro"   value="" required>
+                        <input type="text" name="jogador_2" id="jogador_2" placeholder="Jogador 2" value="" required>
+                        <input type="text" name="jogador_3" id="jogador_3" placeholder="Jogador 3" value="" required>
+                        <input type="text" name="jogador_4" id="jogador_4" placeholder="Jogador 4" value="" required>
+                        <input type="text" name="jogador_5" id="jogador_5" placeholder="Jogador 5" value="" required>
+                        <input type="text" name="jogador_6" id="jogador_6" placeholder="Jogador 6" value="" required>
                     </div>
                     <div id="reserva">
                         <p>Não disponivél</p>
@@ -100,7 +103,6 @@
         </div>
         <div data-role="content">
             <ul id="ul_listatime" data-role="listview" data-filter="true" data-filter-placeholder="Pesquisar Times..." data-inset="true">
-                <script>listaTimes();</script>
             </ul>
         </div>
         <div data-role="footer" data-position="fixed">
@@ -116,19 +118,18 @@
     </div>
     <!-- Fim Lista Time -->
     
-    <!-- Página 3 -->
-    <div data-role="page" id="pagina3" data-title="Exemplo página 3">
+    <!-- Lista Jogadores -->
+    <div data-role="page" id="listaJogador" data-title="Jogadores">
         <div data-role="header">
-            <h1> Exemplo Página 3 </h1>
+            <h1> Jogadores</h1>
         </div>
         <div data-role="content">
-            <p> Página 3 final. </p>
-            <p> <a href="#principal">Voltar</a></p>
+            <ul id="ul_listajogador" data-role="listview" data-filter="true" data-filter-placeholder="Pesquisar Jogadores..." data-inset="true">
+                <li><a data-role="button" href="#">GO</a></li><li><a data-role="button" href="#">LE</a></li><li><a data-role="button" href="#">IRO</a></li><li><a data-role="button" href="#">JAO</a></li><li><a data-role="button" href="#">JUK</a></li><li><a data-role="button" href="#">LIO</a></li>
+            </ul>
         </div>
-        <div data-role="footer">
-            Rodapé
-        </div>    
+        <div data-role="footer"></div>    
     </div>
-    <!-- Fim página 3 -->
+    <!-- Fim Jogadores -->
 </body>
 </html>
