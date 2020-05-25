@@ -1,6 +1,6 @@
 function listaTimes() {
     var html = '';
-    $("#ul_listatime").empty();
+    $("#ul_listatime").innerHtml = '';
     db.transaction(function (transaction) {
         transaction.executeSql(
             "SELECT * FROM time",

@@ -7,7 +7,10 @@
 <script src="js/main.js"></script>
 <script src="js/model.js"></script>
 <script src="js/controller.js"></script>
-<script src="js/script.js"></script>
+<script src="js/backend.js"></script>
+<script>
+    bancoDados();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head> 
 <body> 
@@ -19,6 +22,7 @@
         <div data-role="content" role="main" class="ui-content">
             <p> <a data-role="button" href="#listatimes" onclick="listaTimes()">Times</a> </p>
             <p> <a data-role="button" href="#times">Cadastrar Times</a> </p>
+            <p> <a data-role="button" href="#atualizacao">Atualização</a> </p>
             <!-- <p> <a data-role="button" href="#pagina3" data-rel="dialog">Times</a> </p> -->
         </div>
         <div data-role="footer" data-position="fixed">
@@ -78,7 +82,7 @@
                     </div>
                   </div>
                   <div>
-                      <button type="submit" name="salvartime" data-theme="b" class="ui-btn-hidden" aria-disabled="false" onClick='salvarTime()'>Salvar Time</button>
+                      <button type="button" name="salvartime" data-theme="b" class="ui-btn-hidden" aria-disabled="false" onClick='salvarTime()'>Salvar Time</button>
                  </div>
             </form>                
         </div>
@@ -131,5 +135,27 @@
         <div data-role="footer"></div>    
     </div>
     <!-- Fim Jogadores -->
+
+    <!-- Atualização de dados -->
+    <div data-role="page" id="atualizacao" data-title="FOOTTAL - Atualização">
+        <div data-role="header">
+            <a href="index.html" data-icon="back">Voltar</a>
+            <h1> FOOTTAL - Atualização </h1>
+        </div>
+        <div data-role="content">
+            <a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" onclick="enviarDados();">Salvar dados</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" onclick="recuperarDados();">Recuperar dados</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1> Foottal - amistosos de brinquedo do quintal para o computador </h1>
+            <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a data-icon="home" class="ui-btn-active" href="#principal">Início</a>
+                        </li>
+                    </ui>
+                </div>
+        </div>
+    </div>
 </body>
 </html>
